@@ -19,5 +19,6 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api-auth/', include('rest_framework.urls')),  # 'rest_framework.urls' is a built-in app that provides login and logout views for the browsable API
     path('', include('profiles.urls')),
 ]
