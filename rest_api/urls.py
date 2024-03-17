@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api-auth/', include('rest_framework.urls')),  # 'rest_framework.urls' is a built-in app that provides login and logout views for the browsable API
+    path('api-auth/', include('rest_framework.urls')),
     path('', include('profiles.urls')),
+    path('', include('posts.urls')),
 ]
